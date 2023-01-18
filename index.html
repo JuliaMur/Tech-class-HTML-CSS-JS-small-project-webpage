@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+ 
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul class="nav" id="0">
+                <li><a href="#0">HOME</a></li>
+                <li><a href="#1">ABOUT</a></li>
+                <li><a href="#2">SKILLS</a></li>
+                <li><a href="#prj">PROJECTS</a></li>
+                <li><a href="#4">GALLERY</a></li>
+                <li><a href="#h1-form">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- About section -->
+    <div class="about-section">
+        <div class="inner-container">
+            <h1 id="1">About Me</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cupiditate perspiciatis ut nam similique fuga delectus ab, fugit rerum! Debitis molestiae ducimus dolor dicta vitae veniam, magni illo! Exercitationem, sunt.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laudantium exercitationem, dicta ipsum laboriosam veniam sint nisi molestiae reiciendis delectus expedita. Excepturi, tenetur quo aliquam iste sint voluptates architecto nemo.
+                Lorem,ipsum dolor sit amet consectetur adipisicing elit. Fugiat inventore esse quas, animi facere fuga aliquam ipsa rem quos tenetur? Ullam corrupti harum ipsa temporibus, rerum aut sequi omnis ipsum?
+            </p>
+        </div>
+    </div>
+    <!-- Skills -->
+    <div class="skills">
+        <h1 id="2">My Skills</h1>
+        <li>
+            <h3>HTML5<span class='delete' onclick='deleteSkill(this)'>delete</span></h3><span class="bar"><span class="html"></span></span>
+        </li>
+
+        <li>
+            <h3>CSS3<span class='delete' onclick='deleteSkill(this)'>delete</span></h3><span class="bar"><span class="css"></span></span>
+        </li>
+
+        <li>
+            <h3>JAVASCRIPT<span class='delete' onclick='deleteSkill(this)'>delete</span></h3><span class="bar"><span class="js"></span></span>
+        </li>
+    </div>
+    <!--Skill's Buttons-->
+    
+        <a href="/CV.pdf" download=""> <button class="button button1">Download CV(PDF)</button></a>
+        <a href="/CV.docx" download=""> <button class="button button2">Download CV(DOC)</button></a><br/>
+        <input type="text" name="skill" id="newSkill">
+        <button onclick="addSkill()" class="button button3" type="button" value="addSkill">ADD NEW SKILL</button>
+        
+    
+    <!-- Progects -->
+
+    <div class="my-projects">
+        <h1 id="prj"> My Progects</h1>
+        <div class="project1" onmouseover="show(tooltip1)" onmouseout="hide(tooltip1)">
+            <div class="tooltip" id="tooltip1">
+                This is my first project
+            </div>
+            <div class="overlay">
+                <a href="#">VIEW PROJECT</a>
+        </div> 
+    </div>
+        <div class="project2">
+            <div class="overlay">
+                <a href="#">VIEW PROJECT</a>
+            </div> 
+        </div>
+        <div class="project3">
+            <div class="overlay">
+                <a href="#">VIEW PROJECT</a>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Gallery -->
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+    <h1 class="h1-gallery" id="4">Gallery</h1>
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      
+      <img src="/img/pic1.jpg" style="width:100%">
+      <div class="text-pic">Stars Universe</div>
+    </div>
+    <div class="mySlides fade">
+     
+      <img src="/img/pic2.jpg" style="width:100%">
+      <div class="text-pic">Digital Flower</div>
+    </div>
+  
+    <div class="mySlides fade">
+      
+      <img src="/img/pic3.jpg" style="width:100%">
+      <div class="text-pic">Light Decoration</div>
+    </div>
+    
+    <div class="mySlides fade">
+        
+        <img src="/img/pic4.jpg" style="width:100%">
+        <div class="text-pic">Sea Dreams</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <!--Contact form-->
+
+  <div class ="contact">
+      <h1 id="h1-form">Contact Me</h1>
+
+  </div>
+  <div class="contact-box">
+      <form action="#" method="post" id="contactForm" onsubmit = "formMessage('Submit!'); return false">
+       
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" required maxlength="25"><br/>
+        
+        <input type="text" name="lastname" id="lastname"class="form-control" placeholder="Enter Your Last Name" required maxlength="25"><br/>
+        
+        
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unknown">Unknown</option>
+        </select><br/>
+
+        <input type="text" name="age" id="age" class="form-control" placeholder="Enter Your Age" required min="18" max="100"><br/>
+        
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email" maxlength="50"><br/>
+        
+        <input type="url" name="homepage" id="homepage" class="form-control" placeholder="Enter Your Website" maxlength="50"><br/>
+        
+        <textarea class="form-control" name="comment" id="comment" cols="30" rows="10" placeholder="Write Your Comment" maxlength="255"></textarea><br/>
+
+        <button class="form-button" id="submit" type="submit" value="Submit">Submit</button>
+        <button class="form-button" id="reset" type="reset" value="Reset">Reset</button>
+
+      </form>
+      
+  </div>
+
+  <!--Footer-->
+
+  <footer class="footer">
+      <div class="inner-footer">
+          <div class="social-links">
+              <ul>
+                  <li class="social-items"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li class="social-items"><a href="#"><i class="fab fa-facebook-square"></i></i></a></li>
+                  <li class="social-items"><a href="#"><i class="fab fa-github-square"></i></i></a></li>
+                  <li class="social-items"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+
+          <div class="quick-links">
+              <ul>
+                  <li class="quick-items"><a href="#0">Home</a></li>
+                  <li class="quick-items"><a href="#1">About</a></li>
+                  <li class="quick-items"><a href="#2">Skills</a></li>
+                  <li class="quick-items"><a href="#prj">Projects</a></li>
+                  <li class="quick-items"><a href="#4">Gallery</a></li>
+                  <li class="quick-items"><a href="#h1-form">Contact</a></li>
+             </ul>
+          </div>
+      </div>
+
+      <div class="outer-footer">
+          Copyright &copy; My First Web Page With Love. All Rights Reserved.
+      </div>
+      <p id="date"></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
